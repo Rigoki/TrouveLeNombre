@@ -48,8 +48,7 @@ namespace TrouveLeNombre
                     }
                     catch
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Une erreur a étée détecté veuillez recommencer.");
+                        AfficherErreur();
                     }
                 }
                 if (usernb == nb && error == 0)
@@ -94,6 +93,16 @@ namespace TrouveLeNombre
                 }
                 
             }
+        }
+        static void AfficherErreur()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("***************************************");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Une erreur est survenue");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("***************************************");
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }
